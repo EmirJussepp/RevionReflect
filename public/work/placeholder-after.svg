@@ -1,0 +1,25 @@
+<svg viewBox="0 0 800 600" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="bg2" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#11212D"/>
+      <stop offset="100%" stop-color="#06141B"/>
+    </linearGradient>
+    <linearGradient id="body2" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#CCD0CF"/>
+      <stop offset="55%" stop-color="#9BA8AB"/>
+      <stop offset="100%" stop-color="#253745"/>
+    </linearGradient>
+    <linearGradient id="gloss" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%" stop-color="#ffffff" stop-opacity="0"/>
+      <stop offset="50%" stop-color="#ffffff" stop-opacity="0.55"/>
+      <stop offset="100%" stop-color="#ffffff" stop-opacity="0"/>
+    </linearGradient>
+  </defs>
+  <rect width="800" height="600" fill="url(#bg2)"/>
+  <ellipse cx="400" cy="330" rx="300" ry="110" fill="url(#body2)"/>
+  <path d="M160 330 C 220 220, 340 190, 400 190 C 460 190, 560 220, 620 300" stroke="#ffffff" stroke-width="3" fill="none" opacity="0.6"/>
+  <ellipse cx="330" cy="290" rx="220" ry="34" fill="url(#gloss)" opacity="0.8"/>
+  <circle cx="290" cy="420" r="42" fill="#06141B" stroke="#4A5C6A" stroke-width="10"/>
+  <circle cx="540" cy="420" r="42" fill="#06141B" stroke="#4A5C6A" stroke-width="10"/>
+  <text x="400" y="560" text-anchor="middle" font-family="Arial, sans-serif" font-size="20" fill="#CCD0CF" letter-spacing="2">DESPUÉS</text>
+</svg>
