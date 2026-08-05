@@ -14,14 +14,14 @@ Abrir [http://localhost:3000](http://localhost:3000).
 ## Estructura
 
 - `src/data/site.ts` — datos editables: número de WhatsApp, servicios, ítems de galería. Actualizar acá para cambiar contenido sin tocar componentes.
-- `src/components/` — secciones de la landing (Navbar, Hero, Servicios, Galería con slider antes/después, Contacto, Footer).
+- `src/components/` — secciones de la landing (Navbar, Hero, Servicios, Galería con grilla + lightbox, Contacto, Footer).
 - `public/brand/` — logos e identidad de marca provistos por el cliente.
-- `public/work/` — fotos de trabajos (antes/después). Actualmente con placeholders SVG.
+- `public/work/` — fotos reales de trabajos terminados. Para agregar una nueva: copiarla ahí y sumar un item en `gallery` (`src/data/site.ts`).
 
 ## Pendientes antes de producción
 
 - [ ] Reemplazar `whatsapp` en `src/data/site.ts` por el número real del cliente.
-- [ ] Cargar fotos reales de trabajos en `public/work/` y actualizar `gallery` en `site.ts`.
+- [ ] Sumar más fotos de trabajos a medida que el cliente las pase.
 - [ ] Confirmar Instagram/redes y completar `site.instagram`.
 - [ ] Reemplazar el ícono (`src/app/icon.jpg`) por una versión con fondo transparente si el cliente la provee.
 

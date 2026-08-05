@@ -68,31 +68,15 @@ export type GalleryItem = {
   id: string;
   title: string;
   category: string;
-  before: string;
-  after: string;
+  src: string;
 };
 
-// TODO: reemplazar por fotos reales del cliente en /public/work (antes.jpg / despues.jpg por trabajo)
+// Fotos reales provistas por el cliente en /public/work. Agregar acá cada trabajo nuevo.
 export const gallery: GalleryItem[] = [
-  {
-    id: "placeholder-1",
-    title: "Corrección de pintura",
-    category: "Antes / Después",
-    before: "/work/placeholder-before.svg",
-    after: "/work/placeholder-after.svg",
-  },
-  {
-    id: "placeholder-2",
-    title: "Tratamiento cerámico",
-    category: "Antes / Después",
-    before: "/work/placeholder-before.svg",
-    after: "/work/placeholder-after.svg",
-  },
-  {
-    id: "placeholder-3",
-    title: "Detailing integral",
-    category: "Antes / Después",
-    before: "/work/placeholder-before.svg",
-    after: "/work/placeholder-after.svg",
-  },
+  { id: "limpieza1", title: "Toyota SW4", category: "Lavado y detailing", src: "/work/limpieza1.jpeg" },
+  { id: "limpieza2", title: "Toyota SW4", category: "Lavado bajos", src: "/work/limpieza2.jpeg" },
+  { id: "limpieza3", title: "Toyota SW4", category: "Prelavado con espuma", src: "/work/limpieza3.jpeg" },
+  { id: "limpieza4", title: "Toyota SW4", category: "Brillo final", src: "/work/limpieza4.jpeg" },
+  { id: "limpieza5", title: "Detalle de pintura", category: "Brillo final", src: "/work/limpieza5.jpeg" },
+  { id: "limpieza6", title: "Fiat Punto", category: "Brillo final", src: "/work/limpieza6.jpeg" },
 ];

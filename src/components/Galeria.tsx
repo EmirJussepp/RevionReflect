@@ -1,10 +1,25 @@
 "use client";
 
+import Image from "next/image";
 import { motion } from "framer-motion";
+import { useEffect, useState } from "react";
 import { gallery } from "@/data/site";
-import { BeforeAfterSlider } from "./BeforeAfterSlider";
 
 export function Galeria() {
+  const [active, setActive] = useState<number | null>(null);
+
+  useEffect(() => {
+    if (active === null) return;
+    const onKey = (e: KeyboardEvent) => {
+      if (e.key === "Escape") setActive(null);
+      if (e.key === "ArrowRight") setActive((i) => (i === null ? i : (i + 1) % gallery.length));
+      if (e.key === "ArrowLeft")
+        setActive((i) => (i === null ? i : (i - 1 + gallery.length) % gallery.length));
+    };
+    window.addEventListener("keydown", onKey);
+    return () => window.removeEventListener("keydown", onKey);
+  }, [active]);
+
   return (
     <section id="galeria" className="py-24 md:py-32 border-t border-border">
       <div className="mx-auto max-w-6xl px-5">
@@ -16,29 +31,65 @@ export function Galeria() {
             Galería
           </h2>
           <p className="mt-4 text-silver">
-            Deslizá para ver el antes y el después de cada trabajo.
+            Últimos trabajos terminados en el taller.
           </p>
         </div>
 
-        <div className="grid md:grid-cols-3 gap-6">
+        <div className="columns-2 md:columns-3 gap-4 [column-fill:_balance]">
           {gallery.map((item, i) => (
-            <motion.div
+            <motion.button
               key={item.id}
+              type="button"
+              onClick={() => setActive(i)}
               initial={{ opacity: 0, y: 16 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true, margin: "-60px" }}
-              transition={{ duration: 0.5, delay: i * 0.08 }}
-              className="border border-border"
+              transition={{ duration: 0.5, delay: (i % 3) * 0.08 }}
+              className="group relative mb-4 block w-full overflow-hidden border border-border text-left break-inside-avoid"
             >
-              <BeforeAfterSlider before={item.before} after={item.after} alt={item.title} />
-              <div className="p-4">
+              <Image
+                src={item.src}
+                alt={item.title}
+                width={800}
+                height={1000}
+                className="w-full h-auto object-cover transition-transform duration-500 group-hover:scale-105"
+              />
+              <div className="absolute inset-0 bg-gradient-to-t from-ink/80 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
+              <div className="absolute bottom-0 left-0 right-0 p-4 translate-y-2 opacity-0 group-hover:translate-y-0 group-hover:opacity-100 transition-all duration-300">
                 <p className="text-mist text-sm font-medium">{item.title}</p>
                 <p className="text-silver text-xs mt-0.5">{item.category}</p>
               </div>
-            </motion.div>
+            </motion.button>
           ))}
         </div>
       </div>
+
+      {active !== null && (
+        <div
+          className="fixed inset-0 z-[60] bg-ink/95 backdrop-blur flex items-center justify-center p-6"
+          onClick={() => setActive(null)}
+        >
+          <button
+            aria-label="Cerrar"
+            onClick={() => setActive(null)}
+            className="absolute top-6 right-6 text-mist text-3xl leading-none hover:text-silver"
+          >
+            ×
+          </button>
+          <div className="relative max-w-3xl max-h-[85vh] w-full" onClick={(e) => e.stopPropagation()}>
+            <Image
+              src={gallery[active].src}
+              alt={gallery[active].title}
+              width={1200}
+              height={1500}
+              className="w-full h-auto max-h-[85vh] object-contain mx-auto"
+            />
+            <p className="text-center text-silver text-sm mt-4">
+              {gallery[active].title} — {gallery[active].category}
+            </p>
+          </div>
+        </div>
+      )}
     </section>
   );
 }
