@@ -35,7 +35,7 @@ export function Galeria() {
           </p>
         </div>
 
-        <div className="columns-2 md:columns-3 gap-4 [column-fill:_balance]">
+        <div className="grid grid-cols-2 md:grid-cols-3 gap-px bg-border">
           {gallery.map((item, i) => (
             <motion.button
               key={item.id}
@@ -45,19 +45,23 @@ export function Galeria() {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true, margin: "-60px" }}
               transition={{ duration: 0.5, delay: (i % 3) * 0.08 }}
-              className="group relative mb-4 block w-full overflow-hidden border border-border text-left break-inside-avoid"
+              className="group relative aspect-[4/5] w-full overflow-hidden bg-ink text-left"
             >
               <Image
                 src={item.src}
                 alt={item.title}
-                width={800}
-                height={1000}
-                className="w-full h-auto object-cover transition-transform duration-500 group-hover:scale-105"
+                fill
+                sizes="(min-width: 768px) 33vw, 50vw"
+                className="object-cover transition-transform duration-500 group-hover:scale-105"
               />
-              <div className="absolute inset-0 bg-gradient-to-t from-ink/80 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
-              <div className="absolute bottom-0 left-0 right-0 p-4 translate-y-2 opacity-0 group-hover:translate-y-0 group-hover:opacity-100 transition-all duration-300">
-                <p className="text-mist text-sm font-medium">{item.title}</p>
-                <p className="text-silver text-xs mt-0.5">{item.category}</p>
+              <div className="absolute inset-x-0 bottom-0 h-20 bg-gradient-to-t from-ink/90 to-transparent" />
+              <div className="absolute bottom-0 left-0 right-0 p-3 md:p-4">
+                <p className="text-mist text-xs md:text-sm font-medium leading-tight">
+                  {item.title}
+                </p>
+                <p className="text-silver text-[10px] md:text-xs mt-0.5 uppercase tracking-wide">
+                  {item.category}
+                </p>
               </div>
             </motion.button>
           ))}

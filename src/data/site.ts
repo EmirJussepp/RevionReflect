@@ -3,10 +3,9 @@ export const site = {
   tagline: "Detailing automotor de precisión",
   description:
     "Corrección de pintura, cerámico y detailing integral. Cada auto tratado uno a uno, sin atajos.",
-  // TODO: reemplazar por el número real del cliente (formato: 549 + código de área sin 0 + número sin 15)
-  whatsapp: "5490000000000",
+  whatsapp: "5493564336238",
   whatsappMessage: "Hola! Quiero consultar por un trabajo de detailing.",
-  instagram: "#",
+  instagram: "https://www.instagram.com/revionreflect/",
   location: "Argentina",
 };
 
@@ -32,14 +31,14 @@ export const services: Service[] = [
     description:
       "Protección nanocerámica de largo plazo: resistencia UV, repelencia al agua y brillo de alto estándar.",
     price: "Desde consultar",
-    featured: true,
   },
   {
-    id: "ppf",
-    title: "PPF · Paint Protection Film",
+    id: "preparacion-venta",
+    title: "Preparación para la Venta",
     description:
-      "Película de protección física invisible que absorbe impactos, piedrazos y rayas cotidianas.",
-    price: "A consultar",
+      "Detailing integral pensado para vender más rápido y al mejor precio: interior a fondo, pulido y ese brillo de 0km que genera confianza al primer vistazo.",
+    price: "Desde consultar",
+    featured: true,
   },
   {
     id: "interior",
