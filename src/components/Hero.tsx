@@ -20,7 +20,7 @@ export function Hero() {
               transition={{ duration: 0.6 }}
               className="font-display text-xs tracking-[0.3em] text-silver uppercase mb-6"
             >
-              Detailing · Cerámico · Preparación para la venta
+              Detailing · Corrección de pintura · Preparación para la venta
             </motion.p>
 
             <motion.h1
@@ -29,9 +29,9 @@ export function Hero() {
               transition={{ duration: 0.7, delay: 0.1 }}
               className="font-display font-semibold text-5xl md:text-6xl leading-[1.05] text-gradient"
             >
-              Uno a uno,
+              Pulido a espejo,
               <br />
-              contra tu auto.
+              cuidado al detalle.
             </motion.h1>
 
             <motion.p
@@ -40,8 +40,8 @@ export function Hero() {
               transition={{ duration: 0.7, delay: 0.2 }}
               className="mt-6 max-w-md text-base md:text-lg text-silver"
             >
-              Corrección de pintura, tratamiento cerámico y detailing integral.
-              Cada superficie trabajada con paciencia, en el orden correcto, sin apuro.
+              Corrección de pintura, detailing integral y preparación para la venta.
+              A mano, sin apuro, hasta que el auto vuelva a brillar como el primer día.
             </motion.p>
 
             <motion.div
@@ -73,7 +73,7 @@ export function Hero() {
               className="mt-16 grid grid-cols-3 gap-6 max-w-md border-t border-border pt-8"
             >
               {[
-                ["1 a 1", "Contra tu auto"],
+                ["A mano", "Sin máquinas de línea"],
                 ["Sin apuro", "Ni atajos"],
                 ["Cada detalle", "Importa"],
               ].map(([a, b]) => (

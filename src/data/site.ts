@@ -2,7 +2,7 @@ export const site = {
   name: "Revion Reflect",
   tagline: "Detailing automotor de precisión",
   description:
-    "Corrección de pintura, cerámico y detailing integral. Cada auto tratado uno a uno, sin atajos.",
+    "Corrección de pintura, detailing integral y preparación para la venta, trabajado a mano y sin apuro.",
   whatsapp: "5493564336238",
   whatsappMessage: "Hola! Quiero consultar por un trabajo de detailing.",
   instagram: "https://www.instagram.com/revionreflect/",
@@ -23,13 +23,6 @@ export const services: Service[] = [
     title: "Corrección de Pintura",
     description:
       "Eliminación de rayas, swirl marks y defectos del barniz hasta recuperar la profundidad y el brillo original.",
-    price: "Desde consultar",
-  },
-  {
-    id: "ceramico",
-    title: "Tratamiento Cerámico",
-    description:
-      "Protección nanocerámica de largo plazo: resistencia UV, repelencia al agua y brillo de alto estándar.",
     price: "Desde consultar",
   },
   {

@@ -1,6 +1,6 @@
 # Revion Reflect
 
-Landing de **Revion Reflect**, detailing automotor (corrección de pintura, cerámico, PPF, detailing integral). Next.js 16 (App Router) + Tailwind CSS v4 + Framer Motion, contenido estático (sin backend/DB).
+Landing de **Revion Reflect**, detailing automotor (corrección de pintura, cerámico, preparación para la venta, detailing integral). Next.js 16 (App Router) + Tailwind CSS v4 + Framer Motion, contenido estático (sin backend/DB).
 
 ## Desarrollo
 
