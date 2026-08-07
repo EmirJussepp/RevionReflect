@@ -65,11 +65,24 @@ export function Navbar() {
         <button
           onClick={() => setOpen((v) => !v)}
           className="md:hidden text-mist p-2 -mr-2"
-          aria-label="Abrir menú"
+          aria-label={open ? "Cerrar menú" : "Abrir menú"}
+          aria-expanded={open}
         >
-          <span className="block w-6 h-0.5 bg-mist mb-1.5" />
-          <span className="block w-6 h-0.5 bg-mist mb-1.5" />
-          <span className="block w-4 h-0.5 bg-mist" />
+          <span
+            className={`block w-6 h-0.5 bg-mist transition-transform duration-200 ${
+              open ? "translate-y-2 rotate-45" : "mb-1.5"
+            }`}
+          />
+          <span
+            className={`block w-6 h-0.5 bg-mist transition-opacity duration-200 ${
+              open ? "opacity-0" : "mb-1.5"
+            }`}
+          />
+          <span
+            className={`block h-0.5 bg-mist transition-all duration-200 ${
+              open ? "w-6 -translate-y-2 -rotate-45" : "w-4"
+            }`}
+          />
         </button>
       </nav>
 

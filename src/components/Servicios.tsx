@@ -50,20 +50,24 @@ export function Servicios() {
               </div>
             </motion.div>
           ))}
-        </div>
 
-        <div className="mt-14 flex flex-col sm:flex-row items-start sm:items-center justify-between gap-4 border-t border-border pt-8">
-          <p className="text-silver text-sm">
-            ¿Tenés una consulta específica? Escribinos sin compromiso.
-          </p>
-          <a
+          <motion.a
             href={whatsappLink("Hola! Quiero consultar por un servicio de detailing.")}
             target="_blank"
             rel="noopener noreferrer"
-            className="clip-edge bg-whatsapp text-ink font-semibold px-6 py-3 text-sm hover:brightness-110 transition-all"
+            initial={{ opacity: 0, y: 16 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true, margin: "-60px" }}
+            transition={{ duration: 0.5, delay: (services.length % 3) * 0.08 }}
+            className="relative p-7 bg-ink flex flex-col justify-center gap-3 hover:bg-surface transition-colors"
           >
-            Consultar por WhatsApp
-          </a>
+            <p className="text-mist text-sm">
+              ¿Tenés una consulta específica? Escribinos sin compromiso.
+            </p>
+            <span className="clip-edge bg-whatsapp text-ink font-semibold px-5 py-2.5 text-sm w-fit hover:brightness-110 transition-all">
+              Consultar por WhatsApp
+            </span>
+          </motion.a>
         </div>
       </div>
     </section>
