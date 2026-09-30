@@ -72,8 +72,14 @@ export function Hero() {
             Agendar turno
           </a>
           <a
-            href="#servicios"
+            href="#repuestos"
             className="clip-edge border border-mist/40 px-7 py-3.5 text-mist backdrop-blur-sm hover:border-mist transition-colors"
+          >
+            Repuestos automotores
+          </a>
+          <a
+            href="#servicios"
+            className="text-sm text-silver hover:text-mist transition-colors underline underline-offset-4"
           >
             Ver servicios
           </a>

@@ -1,6 +1,7 @@
 "use client";
 
 import { motion } from "framer-motion";
+import { site } from "@/data/site";
 import { whatsappLink } from "@/lib/whatsapp";
 
 export function Contacto() {
@@ -18,19 +19,29 @@ export function Contacto() {
           transition={{ duration: 0.6 }}
           className="font-display font-semibold text-3xl md:text-5xl text-mist"
         >
-          ¿Listo para proteger tu inversión?
+          ¿Hablamos?
         </motion.h2>
         <p className="mt-4 text-silver">
-          Escribinos por WhatsApp y coordinamos tu turno.
+          Turno para tu auto o consulta de repuestos, escribinos por WhatsApp.
         </p>
-        <a
-          href={whatsappLink()}
-          target="_blank"
-          rel="noopener noreferrer"
-          className="mt-9 inline-flex clip-edge bg-whatsapp text-ink font-semibold px-8 py-4 hover:brightness-110 transition-all"
-        >
-          Agendar por WhatsApp
-        </a>
+        <div className="mt-9 flex flex-wrap items-center justify-center gap-4">
+          <a
+            href={whatsappLink()}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="inline-flex clip-edge bg-whatsapp text-ink font-semibold px-8 py-4 hover:brightness-110 transition-all"
+          >
+            Agendar turno
+          </a>
+          <a
+            href={whatsappLink(site.whatsappRepuestosMinorista)}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="inline-flex clip-edge border border-mist/40 text-mist font-semibold px-8 py-4 hover:border-mist transition-colors"
+          >
+            Consultar repuestos
+          </a>
+        </div>
       </div>
     </section>
   );
