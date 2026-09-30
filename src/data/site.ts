@@ -1,10 +1,12 @@
 export const site = {
   name: "Revion Reflect",
-  tagline: "Detailing automotor de precisión",
+  tagline: "Detailing automotor y repuestos",
   description:
-    "Corrección de pintura, detailing integral y preparación para la venta, trabajado a mano y sin apuro.",
+    "Corrección de pintura, detailing integral y preparación para la venta, trabajado a mano y sin apuro. Además, filtros, aceites y kits de distribución al mejor precio, minorista y mayorista.",
   whatsapp: "5493564336238",
   whatsappMessage: "Hola! Quiero consultar por un trabajo de detailing.",
+  whatsappRepuestosMinorista: "Hola! Quiero consultar precios de repuestos (minorista).",
+  whatsappRepuestosMayorista: "Hola! Quiero consultar precios de repuestos para compra mayorista.",
   instagram: "https://www.instagram.com/revionreflect/",
   location: "Argentina",
 };
@@ -53,6 +55,37 @@ export const services: Service[] = [
     description:
       "Corrección de pintura más cerámico en todas las superficies. El auto trabajado de punta a punta.",
     price: "A consultar",
+  },
+];
+
+export type PartCategory = {
+  id: string;
+  title: string;
+  description: string;
+  icon: "filter" | "droplet" | "cog";
+};
+
+export const partCategories: PartCategory[] = [
+  {
+    id: "filtros",
+    title: "Filtros",
+    description:
+      "Filtros de aceite, aire, combustible y habitáculo para las marcas y modelos más comunes en Argentina.",
+    icon: "filter",
+  },
+  {
+    id: "aceites",
+    title: "Aceites",
+    description:
+      "Minerales, semisintéticos y sintéticos, en la viscosidad y especificación que pide tu auto.",
+    icon: "droplet",
+  },
+  {
+    id: "kits-distribucion",
+    title: "Kits de Distribución",
+    description:
+      "Correa, tensores y bomba de agua. El kit completo, para no volver a abrir el motor en el corto plazo.",
+    icon: "cog",
   },
 ];
 

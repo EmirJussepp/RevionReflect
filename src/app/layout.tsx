@@ -15,9 +15,9 @@ const rajdhani = Rajdhani({
 });
 
 export const metadata: Metadata = {
-  title: "Revion Reflect | Detailing automotor de precisión",
+  title: "Revion Reflect | Detailing automotor y repuestos",
   description:
-    "Corrección de pintura, tratamiento cerámico, PPF y detailing integral. Cada auto, uno a uno.",
+    "Corrección de pintura, detailing integral y preparación para la venta. Además, filtros, aceites y kits de distribución al mejor precio, minorista y mayorista.",
 };
 
 export default function RootLayout({ children }: LayoutProps<"/">) {

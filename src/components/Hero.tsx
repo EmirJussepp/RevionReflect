@@ -33,7 +33,7 @@ export function Hero() {
           transition={{ duration: 0.6 }}
           className="font-display text-xs tracking-[0.3em] text-silver uppercase mb-6"
         >
-          Detailing · Corrección de pintura · Preparación para la venta
+          Detailing · Repuestos · Preparación para la venta
         </motion.p>
 
         <motion.h1
